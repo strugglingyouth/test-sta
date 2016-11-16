@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load staticfiles %}
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Xiyou STA | Pricing</title>
+<meta name="description" content="">
+
+<!-- core CSS -->
+<link href="{% static 'demo/css/bootstrap.min.css' %}" rel="stylesheet">
+<link href="{% static 'demo/css/prettyPhoto.css' %}" rel="stylesheet">
+<link href="{% static 'demo/css/main.css' %}" rel="stylesheet">
+<link href="{% static 'demo/css/responsive.css' %}" rel="stylesheet">
+<link href="{% static 'demo/css/font-awesome.css' %}" rel="stylesheet">
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+      <script src="{% static 'demo/https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js' %}"></script>
+      <script src="{% static 'demo/https://oss.maxcdn.com/respond/1.4.2/respond.min.js' %}"></script>
+    <![endif]-->
+</head>
+
+<body>
+<header id="header">
+  <nav class="navbar navbar-inverse" role="banner">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+        <a class="navbar-brand" href="{% url 'index' %}"><span class="STA">XiyouSTA</span></a></div>
+      <div class="collapse navbar-collapse navbar-right">
+        <ul class="nav navbar-nav">
+          <li><a href="{% url 'index' %}">主页</a></li>
+          <li><a href="{% url 'about' %}">关于我们</a></li>
+          <li><a href="{% url 'services' %}">最新动态</a></li>
+          <li><a href="{% url 'portfolio' %}">成员简介</a></li>
+          <li class="active"><a href="{% url 'pricing' %}">竞赛</a></li>
+          <li><a href="{% url 'contact' %}">联系我们</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+</header>
+<div id="inner-page">
+  <div class="top-center">
+    <h2>竞赛专栏</h2>
+    <p class="lead">竞赛给你的不仅仅是荣誉和经验，也许是一个可以改变一生的机遇<br>
+      The competition gives you not only the honor and the experience, may be it's a chance to change your life.</p>
+  </div>
+  <div class="container">
+    <div class="row pricing-tables">
+      <div class="col-md-4 col-sm-3">
+        <div class="pricing-table highlight-plan">
+          <div class="plan-name">
+            <h3>ACM-ICPC</h3>
+          </div>
+          <div class="plan-price">
+            <div class="interval">Association for Computing Machinery</div><br>
+             <div class="interval">International Collegiate Programming Contest</div>
+          </div>
+          <div class="plan-list">
+            <ul>
+              <li>主办单位：国际计算机学会</li>
+              <li>IBM赞助</li>
+              <li>始于1970年</li>
+              <li>展示大学生创新能力、团队精神</li>
+              <li>最具影响力的大学生计算机竞赛</li>
+              
+            </ul>
+          </div>
+          <div class="plan-signup"> <a href="{% url 'acm' %}" class="btn-system border-btn">Read more</a> </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-3">
+        <div class="pricing-table highlight-plan">
+          <div class="plan-name">
+            <h3>蓝桥杯</h3>
+          </div>
+          <div class="plan-price">
+            <div class="interval">蓝桥杯全国软件和信息技术专业人才大赛</div><br>
+            <div class="interval">全国软件专业人才设计与创业大赛</div> 
+          </div>
+          <div class="plan-list">
+            <ul>
+            <li>主办单位：教育部就业指导中心</li>
+             <li>工业和信息化部人才交流中心</li>
+             <li>以个人为单位，现场比拼，公正公平</li>
+              <li>以赛促学，竞赛内容基于所学专业知识</li>
+               <li>立足行业，结合实际，实战演练，促进就业</li>
+             
+            </ul>
+          </div>
+          <div class="plan-signup"> <a href="{% url 'lanqiao' %}" class="btn-system border-btn">Read more</a> </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-3">
+        <div class="pricing-table highlight-plan">
+          <div class="plan-name">
+            <h3>互联网+</h3>
+          </div>
+          <div class="plan-price">
+            <div class="interval">中国“互联网+”大学生创新创业大赛</div><br>
+            <div class="interval">拥抱互联网+时代</div>
+          </div>
+          <div class="plan-list">
+            <ul>
+              <li>主办单位：全国高等学校学生信息咨询与就业指导中心</li>
+              <li>主管部门：中华人民共和国教育部</li>
+              <li>共筑创新创业梦想</li>
+              <li>创新网络化服务模式</li>
+              <li>发挥互联网在社会服务中的作用</li>
+            </ul>
+          </div>
+          <div class="plan-signup"> <a href="{% url 'hulianwang' %}" class="btn-system border-btn">Read more</a> </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section id="get-started">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h2>有问题? 我们可以为您答疑解惑</h2>
+        <p>如果您想加入我们，请为我们提交您的申请表单<br>
+         Thank you for your visit.</p>
+        <a href="{% url 'contact' %}" class="btn btn-primary">联系我们</a> </div>
+    </div>
+  </div>
+</section>
+
+<footer id="footer">
+  <div class="container">
+    <div class="row">
+    <div class="col-sm-3  block-tit">
+        <div class="footer-tit">
+          主管部门：
+        </div>
+        <span class="p-font">西安邮电大学计算机学院</span>
+        <span class="p-font">               
+          软件工程系
+        </span> 
+      </div>
+      <div class="col-sm-3  block-tit">
+        <div class="footer-tit">
+          相关链接：
+        </div>
+          <span class="p-font"> <a href="http://222.24.19.3:81/xiyoucs/index.asp" target="_blank">西安邮电大学计算机学院</a>
+        </span>
+        <br>
+        <span class="p-font">
+          <a href="http://acm.xupt.edu.cn/" target="_blank">XUPT Online Judge</a>
+        </span>
+      </div>
+      
+      <div class="col-sm-3 block-tit"> 
+        <div class="footer-tit">
+         联系地址：
+        </div>
+        <span class="p-font">                   
+          西安邮电大学长安校区
+        </span>
+        <span class="p-font">               
+          东区逸夫楼 FZ129
+        </span>
+      </div>
+      <div class="col-sm-3 block-tit"> 
+        <div class="footer-tit">
+         关注我们：
+        </div>
+        <span class="p-font">      
+          微信公众号: sta_xupt
+        </span>
+        <br>
+        <span>      
+          <img src="{% static 'demo/images/STA.jpg' %}" style="width: 40%; height: 40%" alt="weixin">
+        </span>
+      </div>
+     
+    </div>
+</div>
+<div class="col-md-12">
+  <center><span>西安邮电大学软件科技协会版权所有 &copy; 2016 XiyouSTA </span></center>
+</div>
+</footer>
+<script src="{% static 'demo/js/jquery.js' %}"></script> 
+<script src="{% static 'demo/js/bootstrap.min.js' %}"></script> 
+<script src="{% static 'demo/js/jquery.prettyPhoto.js' %}"></script> 
+<script src="{% static 'demo/js/jquery.isotope.min.js' %}"></script> 
+<script src="{% static 'demo/js/main.js' %}"></script>
+</body>
+</html>

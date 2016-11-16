@@ -1,0 +1,164 @@
+
+h3{
+	color: red;
+	font-size: 20px;
+}
+p{
+	font-size: 15px;
+}
+@media screen and (max-width: 450px){
+	.a-title{
+		font-size: 0.7em;
+		width: 100%; 
+		height: auto;
+		max-width: 100%; 
+		display: block;
+	}
+	@media screen and (max-width: 400px){
+	.a-title{
+		font-size: 0.48em;
+		width: 100%; 
+		height: auto;
+		max-width: 100%; 
+		display: block;
+	}
+	}
+}
+.btn1{
+	position: relative;
+	font-size: 15px;
+	border: 1 solid black;
+	background: white;
+	color: blue;
+}
+.a-img0{
+	width: 100px;
+	height: 80px;
+	float: left;
+	margin:0 10px 5px 0;
+	border-radius: 30px;
+}
+.img1{
+	float:right;  
+	width:auto;
+	height: auto;
+	max-width: 100%; 
+	display: block;
+	margin:10px 0 5px 5px;
+	position: relative;
+}
+.img2{
+	float:left; 
+	width:auto;
+	height: auto;
+	max-width: 100%; 
+	display: block;
+	margin:15px 15px 15px 0;
+	border-radius: 10px;
+	position: relative;
+}
+.img3{
+	float:left;
+	left:50%;
+	width:auto;
+	height: auto;
+	max-width: 100%; 
+	display: block;
+	margin:15px 15px 15px 0;
+	position: relative;
+}
+@media screen and (max-width: 550px){
+	.l-title{
+		font-size: 0.65em;
+		width: 100%; 
+		height: auto;
+		max-width: 100%; 
+		display: block;
+	}
+	@media screen and (max-width: 400px){
+	.l-title{
+		font-size: 0.48em;
+		width: 100%; 
+		height: auto;
+		max-width: 100%; 
+		display: block;
+	}
+}
+}
+
+.l-img1{
+	float:left;
+	width:200px;
+	height: 200px;
+	border-radius: 180px;
+}
+.l-img2{
+	float:right;
+	width:600px;
+	height: 400px;
+	max-width: 100%; 
+	display: block;
+	margin: 10px 15px 10px 0;
+	border-radius: 10px;
+}
+.l-img3{
+	float:left;
+	max-width: 100%; 
+	display: block;
+	width:400px;
+	height: 250px;
+	margin: 15px 15px 10px 0;
+	border-radius: 10px;
+}
+.h-img1{
+	float: left;
+	max-width: 100%; 
+	display: block;
+	border-radius: 180px;
+	margin:0;
+	width:200px;
+	height: 150px;
+}
+@media screen and (max-width: 450px){
+	.h-title{
+		font-size: 0.65em;
+		float:left;
+		width: 100%; 
+		height: auto;
+		max-width: 100%; 
+		display: block;
+	}
+	@media screen and (max-width: 400px){
+	.h-title{
+		font-size: 0.48em;
+		width: 100%; 
+		height: auto;
+		max-width: 100%; 
+		display: block;
+	}
+}
+}
+.h-img2{
+	float:right;
+	max-width: 100%; 
+	display: block;
+	width:500px;
+	height: 350px;
+	margin:0 0 0 10px;
+	border-radius: 10px;
+}
+.back_top{
+	border-radius:20px 5px 20px 5px;
+	bottom:48px;
+	cursor:pointer;
+	height:48px;
+	opacity:0.8;
+	position:fixed;
+	right:48px;
+	text-align:center;
+	width:48px;
+	z-index:100;
+	background:white;
+	color:red;
+}
+.back_top:hover{opacity:1;}

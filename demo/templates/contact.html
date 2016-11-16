@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load staticfiles %}
+<head>
+<title>Xiyou STA | Join us</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="Content-Type" content="text/html" charset=utf-8" />
+<meta name="keywords" content="西邮,西安邮电大学,软件,科技,软协,软件科技协会,sta,xupt" />
+
+<!-- core CSS -->
+<link href="{% static 'demo/css/bootstrap.min.css' %}" rel="stylesheet">
+<link href="{% static 'demo/css/prettyPhoto.css' %}" rel="stylesheet">
+<link href="{% static 'demo/css/main.css' %}" rel="stylesheet">
+<link href="{% static 'demo/css/responsive.css' %}" rel="stylesheet">
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+      <script src="{% static 'demo/https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js' %}"></script>
+      <script src="{% static 'demo/https://oss.maxcdn.com/respond/1.4.2/respond.min.js' %}"></script>
+    <![endif]-->
+</head>
+
+<body>
+<header id="header">
+  <nav class="navbar navbar-inverse" role="banner">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+        <a class="navbar-brand" href="{% url 'index' %}"><span class="STA">XiyouSTA</span></a> </div>
+      <div class="collapse navbar-collapse navbar-right">
+        <ul class="nav navbar-nav">
+          <li><a href="{% url 'index' %}">主页</a></li>
+          <li><a href="{% url 'about' %}">关于我们</a></li>
+          <li><a href="{% url 'services' %}">最新动态</a></li>
+          <li><a href="{% url 'portfolio' %}">成员简介</a></li>
+          <li><a href="{% url 'pricing' %}">竞赛</a></li>
+          <li class="active"><a href="{% url 'contact' %}">联系我们</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+<div id="inner-page">
+  <div class="top-center">
+    <h2>联系我们</h2>
+    <p class="lead">喜欢编程的同学，我们期待您的加入<br>We can give you what you want.
+</p>
+  </div>
+  <div class="container">
+    <div class="row contact_top">
+      <div class="col-md-3 contact_details"> 
+      <a href="http://j.map.baidu.com/e54vF"  target="_blank">
+        <img src="{% static 'demo/images/weizhi.png' %}" alt="weizhi">
+        <p>西安市长安区<br>
+          西安邮电大学(东区)</p></a>
+      </div></a>
+      <div class="col-md-3 contact_details"> 
+        <a href="http://weibo.com/xiyousta" target="_blank">
+        <img src="{% static 'demo/images/xl-log.png' %}" alt="weibo">
+        <p>西邮软件科技协会</p>
+      </div></a>
+      <div class="col-md-3 contact_details"> 
+        <img src="{% static 'demo/images/weixin.png' %}" alt="weixin">
+        <p>
+          微信公众号：sta_xupt
+        </p>
+      </div>
+      <div class="col-md-3 contact_details"> 
+        <img src="{% static 'demo/images/word.png' %}" alt="shiti">
+        <p><a href="照片.docx"> 2016纳新笔试题下载</a></p>
+      </div>
+
+    </div>
+    <div class="center">
+      <h3>Send us a message</h3>
+      <p class="lead">请填写你正确的信息，并发送给我们，让我们更好的了解你</p>
+    </div>
+    <form action="contact.php" name="sentMessage" id="contactForm" novalidate>
+      <div class="row">
+        <div class="col-sm-5 col-sm-offset-1">
+          <div class="form-group">
+            <label>姓名 *</label>
+            <input type="text" id="name" name="Username" class="form-control"  onblur="identify1();">
+            <img id="name_i" style="margin:0px 3px 0px 0px"><span id="name_p" style="height:10px;color:#ff0000;" ></span>
+            <p class="help-block text-danger"></p>
+          </div>
+          <div class="form-group">
+            <label>邮箱 *</label>
+            <input type="email" id="email" name="Email" class="form-control"  onblur="identify2();"><img id="email_i" style="margin:0px 3px 0px 0px">
+            <span id="email_p" style="height:10px;color:#ff0000;" ></span>
+            <p  class="help-block text-danger"></p>
+          </div>
+          <div class="form-group">
+            <label>电话 *</label>
+            <input type="tel" id="phone" name="PhoneNumber" class="form-control" onblur="identify3();">
+            <img id="phone_i" style="margin:0px 3px 0px 0px"><span id="phone_p" style="height:10px;color:#ff0000;" ></span>
+            <p class="help-block text-danger"></p>
+          </div>
+           <div class="form-group">
+            <label>专业班级 *</label>
+            <input type="text" id="class" name="Class" class="form-control" onblur="identify4();">
+            <img id="class_i" style="margin:0px 3px 0px 0px"><span id="class_p" style="height:10px;color:#ff0000;" ></span>
+            <p class="help-block text-danger"></p>
+          </div>
+        </div>
+        <div class="col-sm-5">
+          <div class="form-group">
+            <label>留言 *</label>
+            <textarea name="message" id="message" name="Message" required class="form-control" style="height:290px;"></textarea>
+            <p class="help-block text-danger"></p>
+          </div>
+        </div>
+        <div class="col-lg-12 text-center">
+          <div id="success"></div>
+          <button type="submit" class="btn btn-primary btn-lg" onclick="">Send Message</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <br>
+  <br>
+</div>
+<footer id="footer">
+  <div class="container">
+    <div class="row">
+    <div class="col-sm-3  block-tit">
+        <div class="footer-tit">
+          主管部门：
+        </div>
+        <span class="p-font">西安邮电大学计算机学院</span>
+        <span class="p-font">               
+          软件工程系
+        </span> 
+      </div>
+      <div class="col-sm-3  block-tit">
+        <div class="footer-tit">
+          相关链接：
+        </div>
+          <span class="p-font"> <a href="http://222.24.19.3:81/xiyoucs/index.asp" target="_blank">西安邮电大学计算机学院</a>
+        </span>
+        <br>
+        <span class="p-font">
+          <a href="http://acm.xupt.edu.cn/" target="_blank">XUPT Online Judge</a>
+        </span>
+      </div>
+      
+      <div class="col-sm-3 block-tit"> 
+        <div class="footer-tit">
+         联系地址：
+        </div>
+        <span class="p-font">                   
+          西安邮电大学长安校区
+        </span>
+        <span class="p-font">               
+          东区逸夫楼 FZ129
+        </span>
+      </div>
+      <div class="col-sm-3 block-tit"> 
+        <div class="footer-tit">
+         关注我们：
+        </div>
+        <span class="p-font">      
+          微信公众号: sta_xupt
+        </span>
+        <br>
+        <span>      
+          <img src="{% static 'demo/images/STA.jpg' %}" style="width: 40%; height: 40%" alt="weixin">
+        </span>
+      </div>
+     
+    </div>
+</div>
+<div class="col-md-12">
+  <center><span>西安邮电大学软件科技协会版权所有 &copy; 2016 XiyouSTA </span></center>
+</div>
+</footer>
+<script src="{% static 'demo/js/jquery.js' %}"></script> 
+<script src="{% static 'demo/js/bootstrap.min.js' %}"></script> 
+<script src="{% static 'demo/js/jquery.prettyPhoto.js' %}"></script> 
+<script src="{% static 'demo/js/jquery.isotope.min.js' %}"></script> 
+<script src="{% static 'demo/js/jqBootstrapValidation.js' %}"></script> 
+<script src="{% static 'demo/js/contact_me.js' %}"></script> 
+<script src="{% static 'demo/js/main.js' %}"></script>
+<script src="{% static 'demo/js/contact_validation.js' %}"></script>
+</body>
+</html>

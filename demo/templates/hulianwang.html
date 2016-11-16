@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load staticfiles %}
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Xiyou STA| HuLianWang</title>
+<meta name="description" content="">
+
+<!-- core CSS -->
+<link href="{% static 'demo/css/bootstrap.min.css' %}" rel="stylesheet">
+<link href="{% static 'demo/css/prettyPhoto.css' %}" rel="stylesheet">
+<link href="{% static 'demo/css/main.css' %}" rel="stylesheet">
+<link href="{% static 'demo/css/responsive.css' %}" rel="stylesheet">
+<link href="{% static 'demo/css/font-awesome.css' %}" rel="stylesheet">
+<link href="{% static 'demo/css/complete.css' %}" rel="stylesheet">
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+<header id="header">
+  <nav class="navbar navbar-inverse" role="banner">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+        <a class="navbar-brand" href={% url 'index' %}><span class="STA">XiyouSTA</span></a></div>
+      <div class="collapse navbar-collapse navbar-right">
+        <ul class="nav navbar-nav">
+          <li><a href={% url 'index' %}>主页</a></li>
+          <li><a href={% url 'about' %}>关于我们</a></li>
+          <li><a href={% url 'services' %}>最新动态</a></li>
+          <li><a href={% url 'portfolio' %}>成员简介</a></li>
+          <li class="active"><a href={% url 'pricing' %}>竞赛</a></li>
+          <li><a href={% url 'contact' %}>加入我们</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<div id="inner-page">
+
+  <div class="top-center">
+    <h2>中国“互联网+”大学生创新创业大赛</h2>
+    <p class="lead">拥抱互联网+时代&nbsp&nbsp&nbsp共筑创新创业梦想</p>
+  </div> 
+
+  <div class="container">  
+  <p style="font-size:25px;color:#f39c12" class="h-title">"互联网+"大学生创新创业大赛</a>
+  </p><br>
+  <img src="{% static 'demo/./images/complete/h-2.jpg' %}" class="h-img1">
+  <p>“互联网+”是创新2.0下的互联网发展的新业态，是知识社会创新2.0推动下的互联网形态演进及其催生的经济社会发展新形态。“互联网+”是互联网思维的进一步实践成果，推动经济形态不断地发生演变，从而带动社会经济实体的生命力，为改革、创新、发展提供广阔的网络平台。</p>
+  <p>通俗的说，“互联网+”就是“互联网+各个传统行业”，但这并不是简单的两者相加，而是利用信息通信技术以及互联网平台，让互联网与传统行业进行深度融合，创造新的发展生态。它代表一种新的社会形态，即充分发挥互联网在社会资源配置中的优化和集成作用，将互联网的创新成果深度融合于经济、社会各域之中，提升全社会的创新力和生产力，形成更广泛的以互联网为基础设施和实现工具的经济发展新形态。</p>
+  2015年7月4日，国务院印发《国务院关于积极推进“互联网+”行动的指导意见》.
+  2016年5月31日，教育部、国家语委在京发布《中国语言生活状况报告（2016）》。“互联网+”入选十大新词和十个流行语。
+  <h3>参赛项目要求</h3>
+  参赛项目要求能够将移动互联网、云计算、大数据、物联网等新一代信息技术与行业产业紧密结合，培育产生基于互联网的新产品、新服务、新业态、新模式，以及推动互联网与教育、医疗、社区等深度融合的公共服务创新。主要包括以下类型：<br/>
+　　1.“互联网+”传统产业：新一代信息技术在传统产业（含一二三产业）领域应用的创新创业项目；<br/>
+　　2.“互联网+”新业态：基于互联网的新产品、新模式、新业态创新创业项目，优先鼓励人工智能产业、智能汽车、智能家居、可穿戴设备、互联网金融、线上线下互动的新兴消费、大规模个性定制等融合型新产品、新模式；<br/>
+　　3.“互联网+”公共服务：互联网与教育、医疗、社区等结合的创新创业项目；<br/>
+　　4.“互联网+”技术支撑平台：互联网、云计算、大数据、物联网等新一代信息技术创新创业项目。<br/>
+　　参赛项目内容须健康、合法，无任何不良信息。参赛项目所涉及的发明创造、专利技术、资源等必须拥有清晰合法的知识产权或物权，报名时需提交完整的具有法律效力的所有人书面授权许可书、项目鉴定证书、专利证书等。抄袭、盗用、提供虚假材料或违反相关法律法规一经发现即刻丧失参赛相关权利并自负一切法律责任。对于已注册运营的项目，在报名时需提交单位概况、法定代表人情况、组织机构代码复印件等相关证明材料.<br/>
+
+    <a href="http://cy.ncss.org.cn"><img src="{% static 'demo/./images/complete/h-3.jpg' %}" class="h-img2"></a>
+    <h3>参赛对象</h3>
+　　大赛分为创意组和实践组。<br/>
+　　创意组参赛条件：申报人是团队负责人或创业企业法人，为普通高等学校在校生（不含在职）；团队尚未正式注册或注册时间晚于2015年5月1日。<br/>
+　　实践组参赛条件：申报人是创业企业法人，为普通高等学校在校生（不含在职）或毕业5年以内的毕业生；创业企业在2015年5月1日前已注册。<br/>
+　　以创新创业团队为单位报名参赛。允许跨校组建团队。每个参赛团队成员不少于3人。
+　　<h3>比赛方式</h3>
+　　大赛采用校级初赛、省级复赛、全国总决赛三级赛制。在校级初赛、省级复赛基础上，按照组委会配额择优遴选项目进入全国决赛。全国共产生300个团队入围全国总决赛，其中创意组100个团队，实践组200个团队。
+　　<h3>大赛奖励</h3>
+　　大赛设金奖30个、银奖70个、铜奖200个，奖励获奖项目。同时，设置集体奖，按照高校获奖情况奖励前20名；设置优秀组织奖，按照省级竞赛组织和获奖情况奖励8名。
+　　<h3>赛程安排</h3>
+    1.参赛报名（6-7月）。参赛团队登录“全国大学生创业服务网”（http://cy.ncss.org.cn）进行报名，也可通过大赛移动端报名(下载大赛APP或订阅大赛微信公众帐号)。报名时间为2015年6月8日至7月31日。<br/>
+    2.初赛复赛（7-9月）。初赛复赛的比赛环节、评审方式等由各高校、各省（区、市）自行决定。各高校对本校报名的项目组织初赛，遴选参加省级复赛的项目。各省（区、市）在9月15日前完成省级复赛，遴选参加全国总决赛的候选项目。<br/>
+    3.全国总决赛（10月）。大赛评审委员会对入围全国决赛项目进行第一轮网上评审，择优选拔100个项目进行下一轮现场决赛。举行现场决赛开幕仪式，决出金、银奖。举办大赛颁奖典礼。<br/>
+  </div>
+</div>
+
+ <section id="get-started">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h2>还想了解更多关于互联网+竞赛吗？</h2>
+        <p>Would you like to know more</p>
+        <a href="http://cy.ncss.org.cn" class="btn btn-primary" target="_blank">了解更多</a>&nbsp<a href={% url 'pricing' %} class="btn btn-primary">返回上层</a> </div>
+    </div>
+  </div>
+</section> 
+<footer id="footer">
+  <div class="container">
+    <div class="row">
+    <div class="col-sm-3  block-tit">
+        <div class="footer-tit">
+          主管部门：
+        </div>
+        <span class="p-font">西安邮电大学计算机学院</span>
+        <span class="p-font">               
+          软件工程系
+        </span> 
+      </div>
+      <div class="col-sm-3  block-tit">
+        <div class="footer-tit">
+          相关链接：
+        </div>
+          <span class="p-font"> <a href="http://222.24.19.3:81/xiyoucs/index.asp" target="_blank">西安邮电大学计算机学院</a>
+        </span>
+        <br>
+        <span class="p-font">
+          <a href="http://acm.xupt.edu.cn/" target="_blank">XUPT Online Judge</a>
+        </span>
+      </div>
+      
+      <div class="col-sm-3 block-tit"> 
+        <div class="footer-tit">
+         联系地址：
+        </div>
+        <span class="p-font">                   
+          西安邮电大学长安校区
+        </span>
+        <span class="p-font">               
+          东区逸夫楼 FZ129
+        </span>
+      </div>
+      <div class="col-sm-3 block-tit"> 
+        <div class="footer-tit">
+         关注我们：
+        </div>
+        <span class="p-font">      
+          微信公众号: sta_xupt
+        </span>
+        <br>
+        <span>      
+          <img src="{% static 'demo/images/STA.jpg' %}" style="width: 40%; height: 40%" alt="weixin">
+        </span>
+      </div>
+     
+    </div>
+</div>
+<div class="col-md-12">
+  <center><span>西安邮电大学软件科技协会版权所有 &copy; 2016 XiyouSTA </span></center>
+</div>
+</footer>
+<script src="js/jquery.js"></script> 
+<script src="js/bootstrap.min.js"></script> 
+<script src="js/jquery.prettyPhoto.js"></script> 
+<script src="js/jquery.isotope.min.js"></script> 
+<script src="js/main.js"></script>
+</body>
+</html>

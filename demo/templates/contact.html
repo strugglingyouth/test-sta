@@ -1,13 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 {% load staticfiles %}
 <head>
 <title>Xiyou STA | Join us</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0" />
 <meta http-equiv="Content-Type" content="text/html" charset=utf-8" />
 <meta name="keywords" content="西邮,西安邮电大学,软件,科技,软协,软件科技协会,sta,xupt" />
-
 <!-- core CSS -->
 <link href="{% static 'demo/css/bootstrap.min.css' %}" rel="stylesheet">
 <link href="{% static 'demo/css/prettyPhoto.css' %}" rel="stylesheet">
@@ -75,30 +74,34 @@
       <h3>Send us a message</h3>
       <p class="lead">请填写你正确的信息，并发送给我们，让我们更好的了解你</p>
     </div>
-    <form action="contact.php" name="sentMessage" id="contactForm" novalidate>
+
+    
+
+<form action="{% url 'comment' %}" name="sentMessage" id="contactForm" novalidate>
+    {% csrf_token %} 
       <div class="row">
         <div class="col-sm-5 col-sm-offset-1">
           <div class="form-group">
             <label>姓名 *</label>
-            <input type="text" id="name" name="Username" class="form-control"  onblur="identify1();">
+            {{ form.user_name }}
             <img id="name_i" style="margin:0px 3px 0px 0px"><span id="name_p" style="height:10px;color:#ff0000;" ></span>
             <p class="help-block text-danger"></p>
           </div>
           <div class="form-group">
             <label>邮箱 *</label>
-            <input type="email" id="email" name="Email" class="form-control"  onblur="identify2();"><img id="email_i" style="margin:0px 3px 0px 0px">
-            <span id="email_p" style="height:10px;color:#ff0000;" ></span>
+            {{ form.user_email }}
+            <img id="email_i" style="margin:0px 3px 0px 0px"><span id="email_p" style="height:10px;color:#ff0000;" ></span>
             <p  class="help-block text-danger"></p>
           </div>
           <div class="form-group">
             <label>电话 *</label>
-            <input type="tel" id="phone" name="PhoneNumber" class="form-control" onblur="identify3();">
+            {{ form.user_phone }}
             <img id="phone_i" style="margin:0px 3px 0px 0px"><span id="phone_p" style="height:10px;color:#ff0000;" ></span>
             <p class="help-block text-danger"></p>
           </div>
            <div class="form-group">
             <label>专业班级 *</label>
-            <input type="text" id="class" name="Class" class="form-control" onblur="identify4();">
+            {{ form.user_grade }}
             <img id="class_i" style="margin:0px 3px 0px 0px"><span id="class_p" style="height:10px;color:#ff0000;" ></span>
             <p class="help-block text-danger"></p>
           </div>
@@ -106,16 +109,19 @@
         <div class="col-sm-5">
           <div class="form-group">
             <label>留言 *</label>
-            <textarea name="message" id="message" name="Message" required class="form-control" style="height:290px;"></textarea>
+            {{ form.user_messages }}
             <p class="help-block text-danger"></p>
           </div>
         </div>
+        <h1>{{ result }}</h1>
         <div class="col-lg-12 text-center">
           <div id="success"></div>
           <button type="submit" class="btn btn-primary btn-lg" onclick="">Send Message</button>
         </div>
       </div>
     </form>
+
+
   </div>
   <br>
   <br>

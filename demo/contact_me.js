@@ -1,5 +1,5 @@
 $(function() {
-    
+
     $("input,textarea").jqBootstrapValidation({
         preventSubmit: true,
         submitError: function($form, event, errors) {
@@ -7,21 +7,13 @@ $(function() {
         },
         submitSuccess: function($form, event) {
             event.preventDefault(); // prevent default submit behaviour
-            //get values from FORM
+            get values from FORM
             var name = $("input#name").val();
             var email = $("input#email").val();
             var phone = $("input#phone").val();
             var grade = $("input#class").val();
             var message = $("textarea#message").val();
             var firstName = name;
-            if(!(identify1() && identify2() && identify3() && identify4())){
-                $('#success').html("<div class='alert alert-danger'>");
-                $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
-                    .append("</button>");
-                $('#success > .alert-danger').append("<strong>对不起," + (firstName?firstName:"") + "同学,您填写的信息不合法，请修改!");
-                $('#success > .alert-danger').append('</div>');
-                return;
-            }
             // var name = "高飞雷";
             // var email = "12321@qq.com";
             // var phone = "18829291269";
@@ -65,13 +57,13 @@ $(function() {
                     $('#success').html("<div class='alert alert-danger'>");
                     $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
                         .append("</button>");
-                    $('#success > .alert-danger').append("<strong>对不起 " + firstName + ",您发送的信息有误，请重试!");
+                    $('#success > .alert-danger').append("<strong>对不起 " + firstName + ",你的信息发送没有收到服务器回应，请在5秒后再试一次!");
                     $('#success > .alert-danger').append('</div>');
                     //clear all fields
                     $('#contactForm').trigger("reset");
-                    // setTimeout(function(){
-                        // window.location.reload();
-                    // },6000);
+                    setTimeout(function(){
+                        window.location.reload();
+                    },6000);
                 },
             })
         },

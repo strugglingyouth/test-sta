@@ -52,7 +52,7 @@ ul {
 	border-top: 4px solid #f39c12;
 }
 .hr2{
-	margin-top: 80px;
+	margin-top: 10px;
 	margin-bottom: 0px;
 	margin-right: 5px;
 	margin-left: 0px;
@@ -68,13 +68,13 @@ ul {
 	width: 360px;
 	border-top: 4px solid #f39c12;
 }
-@media screen and (max-width: 400px){
+@media screen and (min-width: 800px){
 	.hr2{
-		margin-top: 10px;
+		margin-top: -10px;
 		margin-bottom: 0px;
 		margin-right: 0px;
 		margin-left: 2px;
-		width: 280px;
+		width: 250px;
 		border-top: 4px solid #f39c12;
 		float: right;
 	}
@@ -252,7 +252,7 @@ body > section {
 }
 #main-slide .slider-content {
 	top: 50%;
-	margin-top: -110px;
+	margin-top: -100px;
 	left: 0;
 	padding: 0;
 	text-align: center;
@@ -263,6 +263,11 @@ body > section {
 }
 #main-slide .carousel-indicators {
 	bottom: 20px;
+}
+@media screen and (max-width: 400px){
+	#main-slide .carousel-indicators {
+	bottom: 5px;
+}
 }
 .carousel-indicators li {
 	width: 14px !important;
@@ -315,19 +320,24 @@ body > section {
 	-o-transition: all 500ms ease;
 	transition: all 500ms ease;
 }
-#main-slide .slider-content h2 {
+.h2_tag{
+	margin-top: 80px;
 	font-size: 60px;
 	font-weight: 500;
 	text-transform: uppercase;
 	color: #eee;
 	display: block;
+	text-align:center; 
 }
 @media (max-width: 400px) {
-	#main-slide.slider-content h2 {
+	.h2_tag{
+		margin-top: 60px;
 	font-size: 20px;
 	font-weight: 100;
 	text-transform: uppercase;
 	color: #eee;
+	display: block;
+	text-align:center;
 }
 }
 #main-slide .slider-content h2.white, #main-slide .slider-content h3.white {
@@ -810,7 +820,7 @@ img.zoom-img {
 	color: #444;
 }
 #middle h3 {
-	color: #4e4e4e;
+	color: #f39c12;
 	font-size: 18px;
 	font-weight: 600;
 }
@@ -845,6 +855,7 @@ img.zoom-img {
 }
 .panel-group .panel {
 	border-radius: 8px;
+	border:1px solid #f39c12;
 }
 .panel-heading {
 	border-radius: 0;

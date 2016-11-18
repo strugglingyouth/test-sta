@@ -7,13 +7,13 @@ $(function() {
         },
         submitSuccess: function($form, event) {
             event.preventDefault(); // prevent default submit behaviour
-            //get values from FORM
+            // get values from FORM
             var name = $("input#name").val();
-            var email = $("input#email").val();
+            var id = $("input#id").val();
             var phone = $("input#phone").val();
-            var grade = $("input#class").val();
-            var message = $("textarea#message").val();
-            var firstName = name;
+            var major = $("input#major").val();
+            var message = $("#message").val();
+            var firstName = name; // For Success/Failure Message
             if(!(identify1() && identify2() && identify3() && identify4())){
                 $('#success').html("<div class='alert alert-danger'>");
                 $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
@@ -22,24 +22,18 @@ $(function() {
                 $('#success > .alert-danger').append('</div>');
                 return;
             }
-            // var name = "高飞雷";
-            // var email = "12321@qq.com";
-            // var phone = "18829291269";
-            // var grade = "软件1304";
-            // var message = "hello world";
-            // var firstName = name;
             // Check for white space in name for Success/Fail message
             if (firstName.indexOf(' ') >= 0) {
                 firstName = name.split(' ').slice(0, -1).join(' ');
             }
             $.ajax({
-                url: "../comment/",
+                url: "/",
                 type: "POST",
                 data: {
                     user_name: name,
                     user_phone: phone,
-                    user_email: email,
-                    user_grade: grade,
+                    user_number: id,
+                    user_grade: major,
                     user_messages: message
                 },
                 cache: false,
@@ -55,9 +49,6 @@ $(function() {
 
                     //clear all fields
                     $('#contactForm').trigger("reset");
-                    setTimeout(function(){
-                        $(body).load('contact.html');
-                    },36000);
                     
                 },
                 error: function() {
@@ -65,19 +56,16 @@ $(function() {
                     $('#success').html("<div class='alert alert-danger'>");
                     $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
                         .append("</button>");
-                    $('#success > .alert-danger').append("<strong>对不起 " + firstName + ",您发送的信息有误，请重试!");
+                    $('#success > .alert-danger').append("<strong>对不起 " + firstName + ",你的信息发送没有收到服务器回应，请在5秒后再试一次!");
                     $('#success > .alert-danger').append('</div>');
                     //clear all fields
                     $('#contactForm').trigger("reset");
-                    // setTimeout(function(){
-                        // window.location.reload();
-                    // },6000);
                 },
             })
         },
         filter: function() {
             return $(this).is(":visible");
-        },
+        }
     });
 
     $("a[data-toggle=\"tab\"]").click(function(e) {

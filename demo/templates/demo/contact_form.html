@@ -1,0 +1,11 @@
+<form action="contact.php" name="sentMessage" id="contactForm" novalidate>
+      <div class="row">
+            {% for i in form %}
+            {{ i }}
+            {% endfor %}
+        <div class="col-lg-12 text-center">
+          <div id="success"></div>
+          <button type="submit" class="btn btn-primary btn-lg" onclick="">Send Message</button>
+        </div>
+      </div>
+</form>

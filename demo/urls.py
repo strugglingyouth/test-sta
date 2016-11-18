@@ -39,7 +39,6 @@ urlpatterns = [
     url(r'^pricing/$', views.pricing,name='pricing'),
     url(r'^services/$', views.services,name='services'),
     url(r'^comment/$', views.CommentPostView.as_view(), name='comment'),
-    url(r'^enroll/$', views.EnrollPostView.as_view(),name='enroll'),
-    url(r'^question/$', views.question,name='question'),
+    url(r'^enroll/$', views.enroll,name='enroll'),
 
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

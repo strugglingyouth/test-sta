@@ -1,3 +1,8 @@
 from django.contrib import admin
 
-# Register your models here.
+from demo.models import Comments,Enroll
+
+admin.site.register(Comments)
+admin.site.register(Enroll)
+
+

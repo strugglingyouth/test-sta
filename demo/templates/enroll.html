@@ -2,7 +2,7 @@
 <html>
 {% load staticfiles %}
 <head>
-<title>Enroll</title>
+<title>Xiyousta</title>
 <link href="{% static 'demo/enroll_css/style.css' %}" rel="stylesheet" type="text/css" media="all" />
 <link href="{% static 'demo/enroll_css/bootstrap.css' %}" rel="stylesheet" type="text/css" media="all" />
 <link href="{% static 'demo/enroll_css/bootstrap.min.css' %}" rel="stylesheet" type="text/css" media="all" />
@@ -31,7 +31,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 <!-- banner-bottom -->
   <div id="services" class="banner-bottom">
-  <div></div>
   <div class="container">
     <div class="banner-bottom-left">
       <div class="year1">
@@ -98,15 +97,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <div class="row">
           <div class="col-md-3">
             <div class="ch-grid">
-              <div class="ch-item ch-img-1">
-               <div style="margin-top:50px">
-                 
+              <div class="ch-item">
+              <div style="margin-top:40px">
                 <img src="{% static 'demo/enroll_images/b_jiaoliu.png' %}" alt="weizhi">
-
-                 <p style="color:#B7B7B7;font-size:18px;">2016纳新交流群<br>
-                    192807007</p>
+                <p style="color:#B7B7B7;font-size:18px;">2016纳新交流群<br>
+                    192807007
+                <a href="https://jq.qq.com/?_wv=1027&k=41c59tX" target="_blank"><p style="color:#B7B7B7;font-size:15px;">点击加入</p></a></p>
+               </div>
                 </div>
-              </div>
+              
             </div>
           </div>
           <div class="col-md-3">
@@ -123,13 +122,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
           </div>
           <div class="col-md-3">
             <div class="ch-grid">
-              <div class="ch-item ch-img-6">
-               <div style="margin-top:50px">
+              <div class="ch-item1 ch-img-6">
+               <div class="ch-top">
                  <img src="{% static 'demo/enroll_images/b_weixin.png' %}" alt="weixin">
                 <p style="color:#B7B7B7;font-size:18px;">
                   微信公众号<br>sta_xupt
                 </p>
                 </div>
+                 <div class="ch-info">
+                    <img src="{% static 'demo/enroll_images/wei-erweima.jpg' %}">
+                 </div>
               </div>
             </div>
           </div>
@@ -138,9 +140,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
               <div class="ch-item ch-img-7">
                <div style="margin-top:50px">
                  <img src="{% static 'demo/enroll_images/b_word.png' %}" alt="shiti">
-                <p style="color:#fff;font-size:18px;">
-                    <a href="{% url 'question' %}"> 2016纳新笔试题<br>下载</a>
-                </p>
+                <p style="color:#fff;font-size:18px;"><a href="{% url 'question' %}"> 2016纳新笔试题<br>下载</a></p>
                 </div>
               </div>
             </div>
@@ -157,7 +157,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
       <h2>Submit your application</h2>
       <p class="lead">请填写你正确的信息，并发送给我们，让我们更好的了解你</p>
     </div> 
-    <form action="{% url 'enroll' %}" name="sentMessage" id="contactForm" method="post" novalidate>
+    <form action="contact_me.php" name="sentMessage" id="contactForm" novalidate>
       <div class="row">
         <div class="col-sm-5 col-sm-offset-1">
           <div class="form-group">
@@ -210,12 +210,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </footer>
 <!-- //footer -->
 <!-- here stars scrolling icon -->
-<script src="{% static 'demo/js/jquery.js' %}"></script> 
-<script src="{% static 'demo/js/bootstrap.min.js' %}"></script> 
-<script src="{% static 'demo/js/jquery.prettyPhoto.js' %}"></script> 
-<script src="{% static 'demo/js/jquery.isotope.min.js' %}"></script> 
-<script src="{% static 'demo/js/jqBootstrapValidation.js' %}"></script>
-  <script src="{% static 'demo/enroll_js/contact_validation.js' %}"></script>
   <script src="{% static 'demo/enroll_js/contact_me.js' %}"></script>
+  <script src="{% static 'demo/enroll_js/contact_validation.js' %}"></script>
+  <script src="{% static 'demo/enroll_js/jquery.min.js' %}"></script>
 </body>
 </html>
